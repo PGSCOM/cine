@@ -17,6 +17,19 @@
   font-style: normal;
 }
 
+html,
+body {
+  height: 100%;
+}
+
+.featured {
+  height: 100%;
+}
+
+#video {
+  height: 45%;
+}
+
 
 .hijo {
   /* centrar vertical y horizontalmente */
