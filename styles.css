@@ -31,6 +31,13 @@ body {
 }
 
 
+#elvideo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+}
+
 .hijo {
   /* centrar vertical y horizontalmente */
   position: absolute;
