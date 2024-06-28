@@ -1,0 +1,52 @@
+[
+    {
+        "titulo": "Podcast IA Parte 2",
+        "url": "https://open.spotify.com/episode/64iw8E3LVprQ1VNL0S0vjd?si=RkR754qpQmWlEX1UhCLEVg",
+        "img": "./images/covers/IA2.png"
+    },
+    {
+        "titulo": "Macula 2023",
+        "url": "https://maculacsa.github.io/",
+        "img": "./images/covers/macula2023.png"
+    },
+    {
+        "titulo": "Viaje en el Tiempo",
+        "url": "https://www.youtube.com/watch?v=ICaswolrCSU",
+        "img": "./images/covers/Tiempo.png"
+    },
+    {
+        "titulo": "Detrás de Viaje en el Tiempo",
+        "url": "https://www.youtube.com/watch?v=d-5yZWw2bXM",
+        "img": "./images/covers/DetrTiempo.png"
+    },
+    {
+        "titulo": "Detrás de Agua",
+        "url": "https://www.youtube.com/watch?v=BgDsmv8oj2c",
+        "img": "./images/covers/DetrAgua.png"
+    },
+    {
+        "titulo": "Podcast IA Parte 1",
+        "url": "https://open.spotify.com/episode/6VWNwpeM6isGiy6jw01oTd?si=5ec78af3beb24c8b",
+        "img": "./images/covers/IA1.png"
+    },
+    {
+        "titulo": "Corto Agua",
+        "url": "https://www.youtube.com/watch?v=J-APNXRvc1I",
+        "img": "./images/covers/agua.png"
+    },
+    {
+        "titulo": "PGSCON 2022",
+        "url": "https://youtu.be/m6TqQVTNyBw",
+        "img": "./images/covers/PGSCON2022.png"
+    },
+    {
+        "titulo": "Arquímedes",
+        "url": "https://www.youtube.com/watch?v=FRXkT3w5hAQ",
+        "img": "./images/covers/Arquimedes.png"
+    },
+    {
+        "titulo": "Para que la educación no sea un sueño",
+        "url": "https://www.youtube.com/watch?v=layOjJF7W6A",
+        "img": "./images/covers/educacion.png"
+    }
+]
