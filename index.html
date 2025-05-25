@@ -11,10 +11,40 @@
   document.addEventListener('DOMContentLoaded', function() {
   const h1 = document.querySelector('#multiguerras');
   if (h1) {
-    const text = h1.textContent;
-    h1.innerHTML = text.split('').map(char => 
-      char === ' ' ? ' ' : `<span>${char}</span>`
-    ).join('');
+    const breakMobileSpan = h1.querySelector('.break-mobile');
+    
+    if (breakMobileSpan) {
+      // Obtener el texto antes del span
+      let beforeText = '';
+      let currentNode = h1.firstChild;
+      
+      while (currentNode && currentNode !== breakMobileSpan) {
+        if (currentNode.nodeType === Node.TEXT_NODE) {
+          beforeText += currentNode.textContent;
+        }
+        currentNode = currentNode.nextSibling;
+      }
+      
+      // Obtener el texto del span
+      const spanText = breakMobileSpan.textContent;
+      
+      // Crear el HTML final
+      const beforeHtml = beforeText.split('').map(char => 
+        char === ' ' ? ' ' : `<span>${char}</span>`
+      ).join('');
+      
+      const spanHtml = spanText.split('').map(char => 
+        char === ' ' ? ' ' : `<span>${char}</span>`
+      ).join('');
+      
+      h1.innerHTML = beforeHtml + '<span class="break-mobile">' + spanHtml + '</span>';
+    } else {
+      // Comportamiento original si no hay span break-mobile
+      const text = h1.textContent;
+      h1.innerHTML = text.split('').map(char => 
+        char === ' ' ? ' ' : `<span>${char}</span>`
+      ).join('');
+    }
   }
 });
 </script>
@@ -36,9 +66,8 @@
         width="100vh"
         height="100vh">
     </iframe>
-    </div>
-    <div class="featured-details">
-      <h1 id="multiguerras" style="text-align: center;" class="multiguerras featured-title">El Periodo De Multiguerras</h1>
+    </div>    <div class="featured-details">
+      <h1 id="multiguerras" style="text-align: center;" class="multiguerras featured-title">El Periodo <span class="break-mobile">De Multiguerras</span></h1>
       <ul class="tags">
 
         <li class="tag">
