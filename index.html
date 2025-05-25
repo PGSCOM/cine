@@ -7,6 +7,17 @@
   <link rel="stylesheet" href="styles.css">
   <title>PGSCOM cinema</title>
 </head>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+  const h1 = document.querySelector('#multiguerras');
+  if (h1) {
+    const text = h1.textContent;
+    h1.innerHTML = text.split('').map(char => 
+      char === ' ' ? ' ' : `<span>${char}</span>`
+    ).join('');
+  }
+});
+</script>
 <body>
   <div class="sky-image">
     <a href="https://cine.pgscom.es">
@@ -19,7 +30,7 @@
       <iframe
         id="elvideo"
         class="hijo youtube-clean youtube-cover"
-        src="https://www.youtube.com/embed/LqLaXIj7N2g?autoplay=1&loop=1&mute=1&controls=0&modestbranding=1&rel=0&vq=hd1080&hd=1"
+        src="https://www.youtube.com/embed/LqLaXIj7N2g?autoplay=1&playlist=LqLaXIj7N2g&loop=1&mute=1&controls=0&modestbranding=1&rel=0&vq=hd1080&hd=1"
         frameborder="0"
         allow="autoplay; encrypted-media"
         width="100vh"
@@ -27,15 +38,23 @@
     </iframe>
     </div>
     <div class="featured-details">
-      <h1 style="text-align: center;" class="featured-title">El Periodo De Multiguerras</h1>
+      <h1 id="multiguerras" style="text-align: center;" class="multiguerras featured-title">El Periodo De Multiguerras</h1>
       <ul class="tags">
+
         <li class="tag">
-          Hecho en 2025
+          Estrenado en 2025
+        </li>
+
+        <li class="tag">
+          Autodidacta
+        </li>
+
+        <li class="tag">
+          2 años en proceso
         </li>
         <li class="tag">
-          Fusión de sistemas de servidores + efectos especiales
+          Próximamente detrás de las cámaras
         </li>
-      </ul>
     </div>
   </div>
   <div class="featured-actions">

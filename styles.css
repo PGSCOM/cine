@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap');
+
 @font-face {
   font-family: 'Netflix';
   src: url('https://cine.pgscom.es/fonts/AvenirNextLTPro-Regular.otf');
@@ -132,12 +134,14 @@ a {
   gap: 10px;
   list-style: none;
   padding: 0;
-  margin: 0.75em 1em;
+  margin: 0.75em 3em;
 }
 
 .tag {
   /* border: 1px solid red; */
   display: flex;
+  /*tamaño de la fuente*/
+  font-size: 1.375em;
 }
 
 .tag:before {
@@ -157,6 +161,7 @@ a {
   justify-content: space-evenly;
   align-items: center;
   padding-bottom: 2em;
+  padding-top: 2em;
 }
 
 .button {
@@ -322,3 +327,56 @@ main {
     min-width: 177.77vh; /* Maintains 16:9 aspect ratio based on viewport height */
     transform: translate(-50%, -50%);
 }
+.multiguerras {
+  font-family: 'Open Sans', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800; /* Extrabold */
+  font-size: 4rem; /* Ajusta según necesites */
+  text-align: center;
+  line-height: 1.2;
+  margin: 0;
+  padding: 20px 0;
+  /* Borde blanco para navegadores WebKit */
+  -webkit-text-stroke: 1px white;
+  /* Borde blanco para navegadores que soportan text-stroke estándar (experimental, no ampliamente soportado) */
+  text-stroke: 1px white;
+}
+
+/* Cada letra con su propio degradado */
+.multiguerras span {
+  display: inline-block;
+  background: linear-gradient(145deg, hsl(262, 40%, 50%) 30%, #96b6ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  /* Mantener el borde */
+  -webkit-text-stroke: 0.25px white;
+  text-stroke: 0.25px white;
+  /*Tamaño del texto*/
+  font-size: 4.5rem; /* Asegúrate de que coincida con el tamaño del texto principal */
+}
+
+/* Fallback para navegadores que no soporten background-clip */
+@supports not (-webkit-background-clip: text) {
+  h1 span {
+    color: #3f1f76;
+    -webkit-text-stroke: 2px white;
+    text-stroke: 2px white;
+  }
+}
+
+/* Para asegurar que la fuente se cargue */
+
+
+/* JavaScript necesario para separar cada letra en un span */
+/*
+document.addEventListener('DOMContentLoaded', function() {
+  const h1 = document.querySelector('h1');
+  if (h1) {
+    const text = h1.textContent;
+    h1.innerHTML = text.split('').map(char => 
+      char === ' ' ? ' ' : `<span>${char}</span>`
+    ).join('');
+  }
+});
+*/
