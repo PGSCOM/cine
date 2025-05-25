@@ -28,15 +28,19 @@ body {
 }
 
 #video {
-  height: 45%;
+  /* height: 45%; */ /* This is set via inline style in the HTML */
+  /* Styles for #video can be merged with .video-container if desired,
+     or kept separate if #video has unique styles beyond what .video-container provides.
+     The important part is that the element <div id="video" class="video-container">
+     gets the necessary styles for positioning and overflow. */
 }
 
 
 #elvideo {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  position: absolute;
+  /* width: 100%; */ /* REMOVED to let .youtube-cover control dimensions */
+  /* height: 100%; */ /* REMOVED to let .youtube-cover control dimensions */
+  /* object-fit: cover; */ /* REMOVED - Ineffective for iframe content */
+  /* position: absolute; */ /* REMOVED - Handled by .hijo and .youtube-cover classes */
 }
 
 .hijo {
@@ -216,7 +220,7 @@ a {
 }
 
 .image {
-  height: 288px; 
+  height: 288px;
   width: 192px;
   border-radius: 15px;
 }
@@ -282,4 +286,39 @@ main {
 .tab-item:hover :is(path, span) {
  fill: white;
  color: white;
+}
+
+.video-container {
+    width: 100%; /* MODIFIED from 100vh for standard full-width behavior within parent */
+    /* height: 100vh; */ /* Original CSS had this; current height is controlled by inline style on div#video */
+    /*overflow: hidden;*/
+    /*position: relative;*/ /* ADDED - Establishes positioning context for the iframe */
+}
+
+.youtube-clean {
+    pointer-events: none; /* Evita clics en el video */
+}
+
+/* Ocultar elementos que aparecen al hover */
+.video-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* width: 100vh; */ /* These were likely meant to match .video-container's original width/height */
+    /* height: 100vh; */ /* If .video-container is 100% width, these might need adjustment or be removed if not essential */
+                           /* For now, assuming these are not critical to the cover effect of the video itself */
+    width: 100%; /* Adjusting to match potential new .video-container width logic */
+    height: 100%;/* Adjusting to match potential new .video-container height logic */
+    pointer-events: none;
+}
+.youtube-cover {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100vw; /* Ensures video is at least as wide as viewport */
+    height: 56.25vw; /* Maintains 16:9 aspect ratio based on viewport width */
+    min-height: 100vh; /* Ensures video is at least as tall as viewport */
+    min-width: 177.77vh; /* Maintains 16:9 aspect ratio based on viewport height */
+    transform: translate(-50%, -50%);
 }
