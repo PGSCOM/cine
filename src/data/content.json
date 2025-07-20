@@ -89,8 +89,10 @@
   "proximamente": {
     "title": "Proximamente...",
     "video": "/images/Logo animado.mp4",
-    "listContent": ";]",
-    "upcomingContent": []
+    "listContent": "Aún no hay nada pensado ;)",
+    "upcomingContent": [
+      
+    ]
   },
   "navigation": [
     {

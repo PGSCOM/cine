@@ -45,6 +45,13 @@ body {
   /* position: absolute; */ /* REMOVED - Handled by .hijo and .youtube-cover classes */
 }
 
+#elvideofile {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+}
+
 .hijo {
   /* centrar vertical y horizontalmente */
   position: absolute;
@@ -222,6 +229,12 @@ a {
 .list-item {
   display: inline-block;
   margin: 0.5em 0.5em;
+}
+
+.list-title {
+  font-size: 2.25em;
+  justify-content: space-evenly;
+  display: flex;
 }
 
 .image {

@@ -8,7 +8,7 @@ const { navigation, proximamente } = contentData;
 <Layout title="PGSCOM cinema | Proximamente">
   <div class="featured" style="height: 95%;">
     <div id="video" style="height: 45%;">
-      <video id="elvideo" class="hijo" playsinline muted loop autoplay height="100%" src={proximamente.video}></video>
+      <video id="elvideofile" class="hijo" playsinline muted loop autoplay height="100%" src={proximamente.video}></video>
     </div>
     <div class="featured-details">
       <h1 style="text-align: center;" class="featured-title">{proximamente.title}</h1>
@@ -21,18 +21,13 @@ const { navigation, proximamente } = contentData;
         {proximamente.upcomingContent.length > 0 ? (
           proximamente.upcomingContent.map((item) => (
             <div class="list-item">
+            <a href={item.url} target="_blank" rel="noopener noreferrer">
               <img class="image" src={item.image} alt={item.title}>
-              {item.url && (
-                <a href={item.url} target="_blank" rel="noopener noreferrer">
-                  <h3>{item.title}</h3>
-                </a>
-              )}
-              {!item.url && <h3>{item.title}</h3>}
-              {item.description && <p>{item.description}</p>}
+            </a>
             </div>
           ))
         ) : (
-          <h1>{proximamente.listContent}</h1>
+          <h2 class="list-title">{proximamente.listContent}</h2>
         )}
       </div>
     </div>
