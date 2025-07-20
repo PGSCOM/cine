@@ -1,0 +1,130 @@
+---
+import Layout from '../layouts/Layout.astro';
+import contentData from '../data/content.json';
+
+const { site, featured, content, navigation } = contentData;
+---
+
+<Layout title={site.title}>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const h1 = document.querySelector('#multiguerras');
+      if (h1) {
+        const breakMobileSpan = h1.querySelector('.break-mobile');
+        
+        if (breakMobileSpan) {
+          // Obtener el texto antes del span
+          let beforeText = '';
+          let currentNode = h1.firstChild;
+          
+          while (currentNode && currentNode !== breakMobileSpan) {
+            if (currentNode.nodeType === Node.TEXT_NODE) {
+              beforeText += currentNode.textContent;
+            }
+            currentNode = currentNode.nextSibling;
+          }
+          
+          // Obtener el texto del span
+          const spanText = breakMobileSpan.textContent;
+          
+          // Crear el HTML final
+          const beforeHtml = beforeText.split('').map(char => 
+            char === ' ' ? ' ' : `<span>${char}</span>`
+          ).join('');
+          
+          const spanHtml = spanText.split('').map(char => 
+            char === ' ' ? ' ' : `<span>${char}</span>`
+          ).join('');
+          
+          h1.innerHTML = beforeHtml + '<span class="break-mobile">' + spanHtml + '</span>';
+        } else {
+          // Comportamiento original si no hay span break-mobile
+          const text = h1.textContent;
+          h1.innerHTML = text.split('').map(char => 
+            char === ' ' ? ' ' : `<span>${char}</span>`
+          ).join('');
+        }
+      }
+    });
+  </script>
+
+  <div class="featured" style="height: 95%;">
+    <div id="video" class="video-container" style="height: 45%;">
+      <iframe
+        id="elvideo"
+        class="hijo youtube-clean youtube-cover"
+        src={featured.videoUrl}
+        frameborder="0"
+        allow="autoplay; encrypted-media"
+        width="100vh"
+        height="100vh">
+      </iframe>
+    </div>
+    
+    <div class="featured-details">
+      <h1 id="multiguerras" style="text-align: center;" class="multiguerras featured-title">
+        El Periodo <span class="break-mobile">De Multiguerras</span>
+      </h1>
+      <ul class="tags">
+        {featured.tags.map((tag) => (
+          <li class="tag">
+            {typeof tag === 'string' ? (
+              tag
+            ) : (
+              <a href={tag.url} target="_blank" style="color: #87CEEB; text-decoration: none;">
+                {tag.text}
+              </a>
+            )}
+          </li>
+        ))}
+      </ul>
+    </div>
+  </div>
+  
+  <div class="featured-actions">
+    <a href={featured.playUrl} target="_blank" style="color: black;" class="button icon-play">Reproducir</a>
+  </div>
+
+  <main>
+    <div class="list">
+      <h2 class="list-title">Contenidos:</h2>
+      <div class="list-content">
+        {content.map((item) => (
+          <div class="list-item">
+            <a href={item.url} target="_blank">
+              <img class="image" src={item.image} alt={item.title}>
+            </a>
+          </div>
+        ))}
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <ul class="tab-list">
+      {navigation.map((navItem) => (
+        <li class="tab-item">
+          <a href={navItem.url}>
+            {navItem.icon === 'home' ? (
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2.09961L1 12H4V21H11V15H13V21H20V12H23L12 2.09961ZM12 4.79102L18 10.1914V11V19H15V13H9V19H6V10.1914L12 4.79102Z" />
+              </svg>
+            ) : (
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0)">
+                  <path d="M4 3C2.897 3 2 3.897 2 5V19C2 20.103 2.897 21 4 21H12V19H4V5H20V13.2852L22 14.4082V5C22 3.897 21.103 3 20 3H4ZM6.00195 7V9H8V7H6.00195ZM16 7V9H18V7H16ZM6 11V13H8V11H6ZM15.0859 13C14.514 13.019 14 13.492 14 14.1445V22.8555C14 23.7255 14.9132 24.2764 15.6602 23.8574L23.4199 19.502C24.1939 19.067 24.1939 17.932 23.4199 17.498L15.6602 13.1426C15.4734 13.0378 15.2766 12.9937 15.0859 13ZM6 15V17H8V15H6Z" fill="black" />
+                </g>
+                <defs>
+                  <clipPath id="clip0">
+                    <rect width="24" height="24" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+            )}
+            <span>{navItem.text}</span>
+          </a>
+        </li>
+      ))}
+    </ul>
+  </footer>
+</Layout>
