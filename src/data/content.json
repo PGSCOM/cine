@@ -97,12 +97,12 @@
   "navigation": [
     {
       "text": "Inicio",
-      "url": "index.html",
+      "url": "/",
       "icon": "home"
     },
     {
       "text": "Próximamente",
-      "url": "proximamente", 
+      "url": "/proximamente/", 
       "icon": "coming-soon"
     }
   ]
