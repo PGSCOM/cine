@@ -1,0 +1,33 @@
+---
+export interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = "Portfolio cinematográfico de PGSCOM" } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/logo perfil sin fondo.ico">
+  <link rel="stylesheet" href="/styles.css">
+  <title>{title}</title>
+  <meta name="description" content={description}>
+</head>
+<body>
+  <div class="sky-image">
+    <a href="https://cine.pgscom.es">
+      <img src="/images/logo perfil sin fondo.png" height="45" alt="Logo PGSCOM" href="https://cine.pgscom.es" />
+    </a>
+  </div>
+  
+  <slot />
+
+  <!-- 100% privacy friendly analytics -->
+  <script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+  <noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade" /></noscript>
+</body>
+</html>

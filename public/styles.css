@@ -1,0 +1,523 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap');
+
+@font-face {
+  font-family: 'Netflix';
+  src: url('https://cine.pgscom.es/fonts/AvenirNextLTPro-Regular.otf');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Netflix';
+  src: url('https://cine.pgscom.es/fonts/AvenirNextLTPro-Regular.otf');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Netflix';
+  src: url('https://cine.pgscom.es/fonts/AvenirNextLTPro-Bold.otf');
+  font-weight: 700;
+  font-style: normal;
+}
+
+html,
+body {
+  height: 100%;
+  overflow-x: hidden;
+}
+
+.featured {
+  height: 100%;
+}
+
+#video {
+  /* height: 45%; */ /* This is set via inline style in the HTML */
+  /* Styles for #video can be merged with .video-container if desired,
+     or kept separate if #video has unique styles beyond what .video-container provides.
+     The important part is that the element <div id="video" class="video-container">
+     gets the necessary styles for positioning and overflow. */
+}
+
+
+#elvideo {
+  /* width: 100%; */ /* REMOVED to let .youtube-cover control dimensions */
+  /* height: 100%; */ /* REMOVED to let .youtube-cover control dimensions */
+  /* object-fit: cover; */ /* REMOVED - Ineffective for iframe content */
+  /* position: absolute; */ /* REMOVED - Handled by .hijo and .youtube-cover classes */
+}
+
+#elvideofile {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+}
+
+.hijo {
+  /* centrar vertical y horizontalmente */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+.sky-image {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  z-index: 9999;
+}
+
+
+.credits {
+  font-family: system-ui;
+  background: #212429;
+  font-size: 11px;
+  color: white;
+  padding: 0.5rem 0;
+  text-align: center;
+}
+.credits a {
+  color: #F865B0;
+  text-decoration: none;
+}
+
+body {
+  background: black;
+  color: white;
+  margin: 0;
+  font-family: netflix;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.header {
+  padding: 15px 15px 100px;
+  position: relative;
+  z-index: 2;
+  background-image: linear-gradient(to bottom, rgba(0,0,0, .5)  85% , transparent 100% );
+}
+
+.navigation-item {
+  list-style: none;
+  /* border: 1px solid yellow; */
+  text-align: center;
+}
+
+.navigation {
+  padding: 0;
+  margin: 0;
+  /* border: 1px solid red; */
+  display: grid;
+  grid-auto-columns: 100px;
+  grid-auto-flow: column;
+  justify-content: space-around;
+}
+
+
+.featured {
+  margin-top: -90px;
+  position: relative;
+  overflow: hidden;
+}
+
+.featured-details {
+  /* border: 1px solid red; */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: linear-gradient(to top, black 0%, black 40%, transparent 100%);
+}
+
+
+.tags {
+  /* border: 1px solid yellow; */
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+  margin: 0.75em 3em;
+}
+
+.tag {
+  /* border: 1px solid red; */
+  display: flex;
+  /*tamaño de la fuente*/
+  font-size: 1.375em;
+}
+
+.tag:before {
+  content: '•';
+  margin-right: 10px;
+  position: relative;
+  top: 2px;
+}
+
+.tag:first-child::before {
+  display: none;
+}
+
+.featured-actions {
+  /* height: 100px; */
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-bottom: 2em;
+  padding-top: 2em;
+}
+
+.button {
+  /* border: 1px solid blue; */
+  background: white;
+  display: flex;
+  align-items: center;
+  padding: 5px 1em 5px .5em;
+  border: none;
+  border-radius: 3px;
+}
+
+.button::before {
+  /* border: 1px solid red; */
+  content: '';
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  margin-right: 5px;
+}
+
+.button-secondary {
+  background: none;
+  color: white;
+  /* border: 1px solid red; */
+  font-size: 1.1em;
+  min-width: 100px;
+  cursor: pointer;
+  border: none;
+}
+
+.button-secondary::before {
+  display: block;
+  /* border: 1px solid green; */
+  content: '';
+  width: 25px;
+  height: 25px;
+  margin: auto;
+  margin-bottom: 5px;
+}
+
+.icon-plus::before {
+  background: url('https://cine.pgscom.es/images/icons/plus.svg');
+}
+
+.icon-play::before {
+  background: url('https://cine.pgscom.es/images/icons/play.svg');
+}
+
+.icon-info::before {
+  background: url('https://cine.pgscom.es/images/icons/info.svg');
+}
+
+.list-content {
+  text-align: center;
+  margin-top: 1%;
+}
+.list-item {
+  display: inline-block;
+  margin: 0.5em 0.5em;
+}
+
+.list-title {
+  font-size: 2.25em;
+  justify-content: space-evenly;
+  display: flex;
+}
+
+.image {
+  height: 288px;
+  width: 192px;
+  border-radius: 15px;
+}
+
+.list {
+  /* border: 1px solid green; */
+  padding: 0 1em;
+}
+
+main {
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.footer {
+  /* border: 1px solid red; */
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: black;
+  padding: 1em 0 0;
+}
+
+
+.tab-list {
+  /* border: 1px solid green; */
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-auto-flow: column;
+  list-style: none;
+  color: #6e6e6e;
+  padding-bottom: 1em;
+}
+.tab-list a {
+  color: #6e6e6e;
+}
+
+.tab-item {
+  /* border: 1px solid purple; */
+  text-align: center;
+  font-size: .9em;
+}
+
+.tab-item svg {
+  display: block;
+  /* border: 1px solid red; */
+  margin: auto;
+}
+
+.tab-item path{
+  fill: #6e6e6e;
+}
+
+/* .tab-item:hover path, .tab-item:hover span{
+  color: blue;
+  fill: blue;
+} */
+
+.tab-item:hover :is(path, span) {
+ fill: white;
+ color: white;
+}
+
+.video-container {
+    width: 100%; /* MODIFIED from 100vh for standard full-width behavior within parent */
+    /* height: 100vh; */ /* Original CSS had this; current height is controlled by inline style on div#video */
+    /*overflow: hidden;*/
+    /*position: relative;*/ /* ADDED - Establishes positioning context for the iframe */
+}
+
+.youtube-clean {
+    pointer-events: none; /* Evita clics en el video */
+}
+
+/* Ocultar elementos que aparecen al hover */
+.video-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* width: 100vh; */ /* These were likely meant to match .video-container's original width/height */
+    /* height: 100vh; */ /* If .video-container is 100% width, these might need adjustment or be removed if not essential */
+                           /* For now, assuming these are not critical to the cover effect of the video itself */
+    width: 100%; /* Adjusting to match potential new .video-container width logic */
+    height: 100%;/* Adjusting to match potential new .video-container height logic */
+    pointer-events: none;
+}
+.youtube-cover {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100vw; /* Ensures video is at least as wide as viewport */
+    height: 56.25vw; /* Maintains 16:9 aspect ratio based on viewport width */
+    min-height: 100vh; /* Ensures video is at least as tall as viewport */
+    min-width: 177.77vh; /* Maintains 16:9 aspect ratio based on viewport height */
+    transform: translate(-50%, -50%);
+}
+.multiguerras {
+  font-family: 'Open Sans', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800; /* Extrabold */
+  font-size: 4rem; /* Ajusta según necesites */
+  text-align: center;
+  line-height: 1.2;
+  margin: 0;
+  padding: 20px 0;
+  /* Borde blanco para navegadores WebKit */
+  -webkit-text-stroke: 1px white;
+  /* Borde blanco para navegadores que soportan text-stroke estándar (experimental, no ampliamente soportado) */
+  text-stroke: 1px white;
+}
+
+/* Cada letra con su propio degradado */
+.multiguerras span {
+  display: inline-block;
+  background: linear-gradient(145deg, hsl(262, 40%, 50%) 30%, #96b6ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  /* Mantener el borde */
+  -webkit-text-stroke: 0.25px white;
+  text-stroke: 0.25px white;
+  /*Tamaño del texto*/
+  font-size: 4.5rem; /* Asegúrate de que coincida con el tamaño del texto principal */
+}
+
+/* Fallback para navegadores que no soporten background-clip */
+@supports not (-webkit-background-clip: text) {
+  h1 span {
+    color: #3f1f76;
+    -webkit-text-stroke: 2px white;
+    text-stroke: 2px white;
+  }
+}
+
+/* Para asegurar que la fuente se cargue */
+
+
+/* JavaScript necesario para separar cada letra en un span */
+/*
+document.addEventListener('DOMContentLoaded', function() {
+  const h1 = document.querySelector('h1');
+  if (h1) {
+    const text = h1.textContent;
+    h1.innerHTML = text.split('').map(char => 
+      char === ' ' ? ' ' : `<span>${char}</span>`
+    ).join('');
+  }
+});
+*/
+
+/* Media Queries para Responsividad */
+
+/* Para pantallas menores a 1055px */
+@media (max-width: 1055px) {
+  .multiguerras {
+    font-size: 3rem; /* Reducir el tamaño del título principal */
+    padding: 15px 0;
+  }
+  
+  .multiguerras span {
+    font-size: 3.2rem; /* Reducir el tamaño de las letras individuales */
+  }
+  
+  .tags {
+    margin: 0.5em 2em; /* Reducir márgenes laterales */
+    gap: 8px; /* Reducir el espacio entre tags */
+    flex-wrap: wrap; /* Permitir que los tags se envuelvan */
+  }
+  
+  .tag {
+    font-size: 1.2em; /* Reducir tamaño de fuente de los tags */
+  }
+}
+
+/* Para pantallas menores a 768px (tablets) */
+@media (max-width: 768px) {
+  .multiguerras {
+    font-size: 2.5rem;
+    padding: 10px 0;
+  }
+  
+  .multiguerras span {
+    font-size: 2.7rem;
+  }
+  
+  .tags {
+    margin: 0.5em 1em;
+    gap: 6px;
+    flex-wrap: wrap; /* Permitir envolver pero mantener horizontal cuando sea posible */
+    align-items: center;
+  }
+    .tag {
+    font-size: 1.1em;
+    justify-content: center;
+  }
+  
+  /* Ajustar el video container para móviles */
+  .featured {
+    height: auto;
+    min-height: 100vh;
+  }
+  
+  /* Ajustar las acciones destacadas */
+  .featured-actions {
+    padding: 1em;
+  }
+  
+  .button {
+    font-size: 0.9em;
+    padding: 8px 1.2em 8px 0.8em;
+  }
+}
+
+/* Para pantallas menores a 600px - Salto de línea en título */
+@media (max-width: 600px) {
+  .multiguerras .break-mobile {
+    display: block; /* Fuerza salto de línea */
+  }
+  
+  .multiguerras {
+    font-size: 1.8rem;
+    padding: 8px 0;
+    line-height: 1.1; /* Ajustar altura de línea para el salto */
+  }
+  
+  .multiguerras span {
+    font-size: 2rem;
+  }
+}
+
+/* Para pantallas menores a 480px (móviles) */
+@media (max-width: 480px) {
+  .multiguerras {
+    font-size: 2rem;
+    padding: 8px 0;
+  }
+  
+  .multiguerras span {
+    font-size: 2.2rem;
+  }
+  
+  .tags {
+    margin: 0.5em 0.5em;
+    gap: 4px;
+    flex-direction: column; /* Disposición vertical para móviles */
+  }
+  
+  .tag {
+    font-size: 1em;
+    padding: 2px 0;
+    justify-content: center;
+  }
+  
+  .tag:before {
+    display: none; /* Ocultar bullets en vista vertical */
+  }
+  
+  .tag:first-child::before {
+    display: none;
+  }
+}
+
+/* Para pantallas muy pequeñas menores a 360px */
+@media (max-width: 360px) {
+  .multiguerras {
+    font-size: 1.8rem;
+    padding: 5px 0;
+  }
+  
+  .multiguerras span {
+    font-size: 2rem;
+  }
+  
+  .tag {
+    font-size: 0.9em;
+  }
+}

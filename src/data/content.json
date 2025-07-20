@@ -1,0 +1,109 @@
+{
+  "site": {
+    "title": "PGSCOM cinema",
+    "description": "Portfolio cinematográfico de PGSCOM",
+    "url": "https://cine.pgscom.es"
+  },
+  "featured": {
+    "title": "El Periodo De Multiguerras",
+    "videoUrl": "https://www.youtube.com/embed/LqLaXIj7N2g?autoplay=1&playlist=LqLaXIj7N2g&loop=1&mute=1&controls=0&modestbranding=1&rel=0&vq=hd1080&hd=1",
+    "playUrl": "https://www.youtube.com/watch?v=BZoJm4YVCpo",
+    "tags": [
+      "Estrenado en 2025",
+      "Autodidacta",
+      "2 años en proceso",
+      {
+        "text": "Detrás de las cámaras",
+        "url": "https://www.youtube.com/live/Qo3fxtazZl0"
+      }
+    ]
+  },
+  "content": [
+    {
+      "title": "El Periodo de Multiguerras",
+      "image": "./images/covers/multiguerras.png",
+      "url": "https://www.youtube.com/watch?v=BZoJm4YVCpo",
+      "type": "video"
+    },
+    {
+      "title": "Podcast IA Parte 2",
+      "image": "./images/covers/IA2.png",
+      "url": "https://open.spotify.com/episode/64iw8E3LVprQ1VNL0S0vjd?si=RkR754qpQmWlEX1UhCLEVg",
+      "type": "podcast"
+    },
+    {
+      "title": "Macula Developer",
+      "image": "./images/covers/macula2023.png",
+      "url": "https://premiosmacula.es/",
+      "type": "external"
+    },
+    {
+      "title": "Viaje en el Tiempo",
+      "image": "./images/covers/Tiempo.png",
+      "url": "https://www.youtube.com/watch?v=ICaswolrCSU",
+      "type": "video"
+    },
+    {
+      "title": "Detrás de Viaje en el Tiempo",
+      "image": "./images/covers/DetrTiempo.png",
+      "url": "https://www.youtube.com/watch?v=d-5yZWw2bXM",
+      "type": "video"
+    },
+    {
+      "title": "Detrás de Agua",
+      "image": "./images/covers/DetrAgua.png",
+      "url": "https://www.youtube.com/watch?v=BgDsmv8oj2c",
+      "type": "video"
+    },
+    {
+      "title": "Podcast IA Parte 1",
+      "image": "./images/covers/IA1.png",
+      "url": "https://open.spotify.com/episode/6VWNwpeM6isGiy6jw01oTd?si=5ec78af3beb24c8b",
+      "type": "podcast"
+    },
+    {
+      "title": "Corto Agua",
+      "image": "./images/covers/agua.png",
+      "url": "https://www.youtube.com/watch?v=J-APNXRvc1I",
+      "type": "video"
+    },
+    {
+      "title": "PGSCON 2022",
+      "image": "./images/covers/PGSCON2022.png",
+      "url": "https://youtu.be/m6TqQVTNyBw",
+      "type": "video"
+    },
+    {
+      "title": "Arquímedes",
+      "image": "./images/covers/Arquimedes.png",
+      "url": "https://www.youtube.com/watch?v=FRXkT3w5hAQ",
+      "type": "video"
+    },
+    {
+      "title": "Para que la educación no sea un sueño",
+      "image": "./images/covers/educacion.png",
+      "url": "https://www.youtube.com/watch?v=layOjJF7W6A",
+      "type": "video"
+    }
+  ],
+  "proximamente": {
+    "title": "Proximamente...",
+    "video": "/images/Logo animado.mp4",
+    "listContent": "Aún no hay nada pensado ;)",
+    "upcomingContent": [
+      
+    ]
+  },
+  "navigation": [
+    {
+      "text": "Inicio",
+      "url": "index.html",
+      "icon": "home"
+    },
+    {
+      "text": "Próximamente",
+      "url": "proximamente", 
+      "icon": "coming-soon"
+    }
+  ]
+}
