@@ -7,8 +7,16 @@ const { navigation, proximamente } = contentData;
 
 <Layout title="PGSCOM cinema | Proximamente">
   <div class="featured" style="height: 95%;">
-    <div id="video" style="height: 45%;">
-      <video id="elvideofile" class="hijo" playsinline muted loop autoplay height="100%" src={proximamente.video}></video>
+    <div id="video" class="video-container" style="height: 45%;">
+      <iframe
+        id="elvideo"
+        class="hijo youtube-clean youtube-cover"
+        src="https://www.youtube.com/embed/rXdeot788Co?autoplay=1&playlist=rXdeot788Co&loop=1&mute=1&controls=0&modestbranding=1&rel=0&vq=hd1080&hd=1"
+        frameborder="0"
+        allow="autoplay; encrypted-media"
+        width="100vh"
+        height="100vh">
+      </iframe>
     </div>
     <div class="featured-details">
       <h1 style="text-align: center;" class="featured-title">{proximamente.title}</h1>
