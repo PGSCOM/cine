@@ -331,11 +331,13 @@ main {
   font-family: 'Open Sans', sans-serif;
   font-optical-sizing: auto;
   font-weight: 800; /* Extrabold */
-  font-size: 4rem; /* Ajusta según necesites */
+  font-size: clamp(1.5rem, 8vw, 4rem);
   text-align: center;
   line-height: 1.2;
   margin: 0;
   padding: 20px 0;
+  word-break: keep-all;
+  overflow-wrap: break-word;
   /* Borde blanco para navegadores WebKit */
   -webkit-text-stroke: 1px white;
   /* Borde blanco para navegadores que soportan text-stroke estándar (experimental, no ampliamente soportado) */
@@ -353,7 +355,7 @@ main {
   -webkit-text-stroke: 0.25px white;
   text-stroke: 0.25px white;
   /*Tamaño del texto*/
-  font-size: 4.5rem; /* Asegúrate de que coincida con el tamaño del texto principal */
+  font-size: clamp(1.8rem, 9vw, 4.5rem);
 }
 
 /* Fallback para navegadores que no soporten background-clip */
@@ -386,12 +388,8 @@ document.addEventListener('DOMContentLoaded', function() {
 /* Para pantallas menores a 1055px */
 @media (max-width: 1055px) {
   .multiguerras {
-    font-size: 3rem; /* Reducir el tamaño del título principal */
+    /* Tamaño ahora se adapta con clamp */
     padding: 15px 0;
-  }
-  
-  .multiguerras span {
-    font-size: 3.2rem; /* Reducir el tamaño de las letras individuales */
   }
   
   .tags {
@@ -408,12 +406,8 @@ document.addEventListener('DOMContentLoaded', function() {
 /* Para pantallas menores a 768px (tablets) */
 @media (max-width: 768px) {
   .multiguerras {
-    font-size: 2.5rem;
+    /* Tamaño ahora se adapta con clamp */
     padding: 10px 0;
-  }
-  
-  .multiguerras span {
-    font-size: 2.7rem;
   }
   
   .tags {
@@ -447,29 +441,26 @@ document.addEventListener('DOMContentLoaded', function() {
 /* Para pantallas menores a 600px - Salto de línea en título */
 @media (max-width: 600px) {
   .multiguerras .break-mobile {
-    display: block; /* Fuerza salto de línea */
+    display: block; /* Fuerza salto de línea en la frase completa */
+    white-space: nowrap; /* Evita que el span se rompa internamente */
   }
   
   .multiguerras {
-    font-size: 1.8rem;
+    font-size: clamp(1.5rem, 8vw, 2rem);
     padding: 8px 0;
     line-height: 1.1; /* Ajustar altura de línea para el salto */
   }
   
   .multiguerras span {
-    font-size: 2rem;
+    font-size: clamp(1.7rem, 8.5vw, 2.2rem);
   }
 }
 
 /* Para pantallas menores a 480px (móviles) */
 @media (max-width: 480px) {
   .multiguerras {
-    font-size: 2rem;
+    /* Tamaño ahora se adapta con clamp */
     padding: 8px 0;
-  }
-  
-  .multiguerras span {
-    font-size: 2.2rem;
   }
   
   .tags {
@@ -496,12 +487,12 @@ document.addEventListener('DOMContentLoaded', function() {
 /* Para pantallas muy pequeñas menores a 360px */
 @media (max-width: 360px) {
   .multiguerras {
-    font-size: 1.8rem;
+    font-size: clamp(1.2rem, 7vw, 1.8rem);
     padding: 5px 0;
   }
   
   .multiguerras span {
-    font-size: 2rem;
+    font-size: clamp(1.4rem, 7.5vw, 2rem);
   }
   
   .tag {
