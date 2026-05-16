@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/logo perfil sin fondo.ico">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="../styles.css">
   <title>PGSCOM cinema</title>
 </head>
 <script>
@@ -57,15 +57,25 @@
 
   <div class="featured" style="height: 95%;">
     <div id="video" class="video-container" style="height: 45%;">
-      <iframe
+      <video
         id="elvideo"
-        class="hijo youtube-clean youtube-cover"
-        src="https://www.youtube.com/embed/LqLaXIj7N2g?autoplay=1&playlist=LqLaXIj7N2g&loop=1&mute=1&controls=0&modestbranding=1&rel=0&vq=hd1080&hd=1"
-        frameborder="0"
-        allow="autoplay; encrypted-media"
-        width="100vh"
-        height="100vh">
-    </iframe>
+        class="hijo video-cover"
+        autoplay
+        loop
+        muted
+        playsinline
+        preload="auto"
+      >
+        <source
+          src="https://pgscom.github.io/cdn-web/cine/multiguerrasshowcase4k.webm"
+          type="video/webm"
+          media="(min-width: 2160px)"
+        />
+        <source
+          src="https://pgscom.github.io/cdn-web/cine/multiguerrasshowcase1080.webm"
+          type="video/webm"
+        />
+      </video>
     </div>    <div class="featured-details">
       <h1 id="multiguerras" style="text-align: center;" class="multiguerras featured-title">El Periodo <span class="break-mobile">De Multiguerras</span></h1>
       <ul class="tags">

@@ -6,7 +6,10 @@
   },
   "featured": {
     "title": "El Periodo De Multiguerras",
-    "videoUrl": "https://www.youtube.com/embed/LqLaXIj7N2g?autoplay=1&playlist=LqLaXIj7N2g&loop=1&mute=1&controls=0&modestbranding=1&rel=0&vq=hd1080&hd=1",
+    "videoSources": [
+      { "src": "https://pgscom.github.io/cdn-web/cine/multiguerrasshowcase4k.webm", "type": "video/webm", "media": "(min-width: 2160px)" },
+      { "src": "https://pgscom.github.io/cdn-web/cine/multiguerrasshowcase1080.webm", "type": "video/webm" }
+    ],
     "playUrl": "https://www.youtube.com/watch?v=BZoJm4YVCpo",
     "tags": [
       "Estrenado en 2025",

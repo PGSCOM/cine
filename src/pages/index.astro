@@ -21,15 +21,19 @@ const { site, featured, content, navigation } = contentData;
 
   <div class="featured" style="height: 95%;">
     <div id="video" class="video-container" style="height: 45%;">
-      <iframe
+      <video
         id="elvideo"
-        class="hijo youtube-clean youtube-cover"
-        src={featured.videoUrl}
-        frameborder="0"
-        allow="autoplay; encrypted-media"
-        width="100vh"
-        height="100vh">
-      </iframe>
+        class="hijo video-cover"
+        autoplay
+        loop
+        muted
+        playsinline
+        preload="auto"
+      >
+        {featured.videoSources.map((source) => (
+          <source src={source.src} type={source.type} media={source.media} />
+        ))}
+      </video>
     </div>
     
     <div class="featured-details">

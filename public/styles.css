@@ -330,15 +330,26 @@ main {
     height: 100%;/* Adjusting to match potential new .video-container height logic */
     pointer-events: none;
 }
-.youtube-cover {
+.video-cover {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 100vw; /* Ensures video is at least as wide as viewport */
-    height: 56.25vw; /* Maintains 16:9 aspect ratio based on viewport width */
-    min-height: 100vh; /* Ensures video is at least as tall as viewport */
-    min-width: 177.77vh; /* Maintains 16:9 aspect ratio based on viewport height */
+    width: 100vw;
+    height: 56.25vw;
+    min-height: 100vh;
+    min-width: 177.77vh;
     transform: translate(-50%, -50%);
+    object-fit: cover;
+    border: none;
+    outline: none;
+}
+
+.video-cover::-webkit-media-controls-panel {
+    display: none !important;
+}
+
+.video-container::after {
+    display: none;
 }
 .multiguerras {
   font-family: 'Open Sans', sans-serif;
