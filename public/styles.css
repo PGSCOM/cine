@@ -458,9 +458,14 @@ document.addEventListener('DOMContentLoaded', function() {
 }
 
 /* Para pantallas menores a 600px - Salto de línea en título */
+.multiguerras .word-block {
+  display: inline-block;
+  white-space: nowrap;
+}
+
 @media (max-width: 600px) {
   .multiguerras .break-mobile {
-    display: block; /* Fuerza salto de línea */
+    display: block;
   }
   
   .multiguerras {

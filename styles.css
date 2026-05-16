@@ -29,22 +29,6 @@ body {
   height: 100%;
 }
 
-#video {
-  /* height: 45%; */ /* This is set via inline style in the HTML */
-  /* Styles for #video can be merged with .video-container if desired,
-     or kept separate if #video has unique styles beyond what .video-container provides.
-     The important part is that the element <div id="video" class="video-container">
-     gets the necessary styles for positioning and overflow. */
-}
-
-
-#elvideo {
-  /* width: 100%; */ /* REMOVED to let .youtube-cover control dimensions */
-  /* height: 100%; */ /* REMOVED to let .youtube-cover control dimensions */
-  /* object-fit: cover; */ /* REMOVED - Ineffective for iframe content */
-  /* position: absolute; */ /* REMOVED - Handled by .hijo and .youtube-cover classes */
-}
-
 .hijo {
   /* centrar vertical y horizontalmente */
   position: absolute;
