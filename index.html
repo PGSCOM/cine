@@ -56,16 +56,25 @@
     </script>
     <div class="featured" style="height: 95%">
       <div id="video" class="video-container" style="height: 45%">
-        <iframe
+        <video
           id="elvideo"
-          class="hijo youtube-clean youtube-cover"
-          src="https://www.youtube.com/embed/LqLaXIj7N2g?autoplay=1&playlist=LqLaXIj7N2g&loop=1&mute=1&controls=0&modestbranding=1&rel=0&vq=hd1080&hd=1"
-          frameborder="0"
-          allow="autoplay; encrypted-media"
-          width="100vh"
-          height="100vh"
+          class="hijo video-cover"
+          autoplay
+          loop
+          muted
+          playsinline
+          preload="auto"
         >
-        </iframe>
+          <source
+            src="https://pgscom.github.io/cdn-web/cine/multiguerrasshowcase4k.webm"
+            type="video/webm"
+            media="(min-width: 2160px)"
+          />
+          <source
+            src="https://pgscom.github.io/cdn-web/cine/multiguerrasshowcase1080.webm"
+            type="video/webm"
+          />
+        </video>
       </div>
       <div class="featured-details">
         <h1

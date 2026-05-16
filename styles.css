@@ -317,7 +317,8 @@ main {
     height: 100%;/* Adjusting to match potential new .video-container height logic */
     pointer-events: none;
 }
-.youtube-cover {
+/* Clase para el elemento <video> que reemplaza al iframe de YouTube */
+.video-cover {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -326,6 +327,19 @@ main {
     min-height: 100vh; /* Ensures video is at least as tall as viewport */
     min-width: 177.77vh; /* Maintains 16:9 aspect ratio based on viewport height */
     transform: translate(-50%, -50%);
+    object-fit: cover; /* Cubre el contenedor manteniendo la proporción */
+    border: none;
+    outline: none;
+}
+
+/* Evitar que los controles del video aparezcan al hacer hover */
+.video-cover::-webkit-media-controls-panel {
+    display: none !important;
+}
+
+/* Eliminar el pseudo-elemento ::after de .video-container, ya no es necesario con <video> */
+.video-container::after {
+    display: none;
 }
 .multiguerras {
   font-family: 'Open Sans', sans-serif;
