@@ -61,6 +61,10 @@ Puedes configurar la página "Próximamente" editando la sección `proximamente`
 
 Después ejecuta `npm run build` para generar los archivos HTML actualizados.
 
+### Muro de portadas (`muro.webp` y `og.jpg`)
+
+Al terminar el build, `integrations/muro.mjs` monta las portadas de `content` en un muro inclinado y genera `dist/muro.webp` (2000×1125) y `dist/og.jpg` (1200×630, la imagen Open Graph de la web). pgscom.es usa `https://cine.pgscom.es/muro.webp` como imagen del proyecto, así que añadir una portada aquí la actualiza allí con el siguiente despliegue.
+
 ## Despliegue
 
 El comando `npm run build` genera archivos HTML estáticos en la carpeta `dist/` que pueden ser desplegados directamente en GitHub Pages.
